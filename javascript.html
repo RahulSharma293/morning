@@ -1,0 +1,95 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Sign-Up Page</title>
+
+		<style>
+     	* {box-sizing:border-box}
+body {
+font-family: Verdana,sans-serif;
+}
+
+        
+        * {box-sizing: border-box}      
+		input[type=text], input[type=password],input[type=email],input[type=tel] {
+        width: 20%;
+        padding: 10px;
+        margin: 5px 0 22px 0;
+        display: inline-block;
+        border: none;
+        
+}
+#submit
+{
+  background-color: green;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 15%;
+    opacity: 2.9;
+    margin-bottom: 10px;
+    margin-left: 10px
+}
+#submit:hover{
+            border: none;
+            background: #943126;
+}
+.container
+{
+padding : 19px;
+}
+.bg {
+     border-color:transparent;
+      margin-right:150px;
+      margin-left:150px;
+     background-image:url("r.jpeg");
+    border-radius:100px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+</style>
+</head>
+<body>
+
+<div class="bg">
+		<form name="form" onsubmit="return myfun()"method="post">
+             <div class="container">		  
+                 <p><center>Please fill in this form to create an account.</center></p>
+             <br>
+            <center><label for="Name" ><b>Name</b></label><br>
+            <input type="text" placeholder="Enter your Name"  name="Name" minlength=3>
+            <br><label for="email" ><b>Email</b></label><br>
+            <input type="email" placeholder="Enter your Email" name ="email">
+            <br><label for="password" ><b>Password</b></label><br>
+            <input type="password" placeholder="Password" name="password" minlength="8" > 
+            <br><label for="confirm"><b>Confirm Password<b></label><br>
+            <input type="password" placeholder="Confirm Password" name="confirm" minlength="8">
+           <center><input type="submit" id="submit" value ="Sign Up"><a href=""></a></center>
+             </div></form>    
+             <script>
+             function myfun()
+             {
+            	 if(document.form.Name.value==""){
+            		 alert("enter your name");
+            		 return false;
+            	 }
+            	 if(document.form.email.value==""){
+            		 alert("enter your email");
+            		 return false;
+            	 }
+            	 if(document.form.password.value==""){
+            		 alert("enter password");
+            		 return false;
+            	}
+            	 if(document.form.confirm.value==""){
+            		 alert("fill the required filled");
+            		 return false;
+            	 }
+            return true;
+             }
+             </script>
+    </body>
+</html>
